@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="isNewAppVersionAvailable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isNewAppVersionAvailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFn-EK-bKk">
+                                <rect key="frame" x="0.0" y="56" width="414" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter Application ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8K-Xx-LfM">
+                                <rect key="frame" x="10" y="113" width="394" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://itunes.apple.com/lookup?id=YOUR_APP_ID" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbl-p2-JpG">
+                                <rect key="frame" x="10" y="144" width="394" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your App ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erc-cZ-HZ1">
+                                <rect key="frame" x="11" y="196" width="392" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="me9-YN-4Y0"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-uf-vC7">
+                                <rect key="frame" x="40" y="248" width="339" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="339" id="aJe-SU-kdt"/>
+                                    <constraint firstAttribute="height" constant="50" id="dpH-r0-wSh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Check New App Version"/>
+                                <connections>
+                                    <action selector="btnCheckUpdateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WdW-uQ-cuC"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo2-EZ-jYZ">
+                                <rect key="frame" x="36" y="353" width="347" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="347" id="NG5-HD-bhW"/>
+                                    <constraint firstAttribute="height" constant="155" id="lnI-cD-670"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.41634525849999998" green="1" blue="0.84521318970000003" alpha="0.92481844189999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="t8K-Xx-LfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8BW-H7-eeo"/>
+                            <constraint firstItem="Lbl-p2-JpG" firstAttribute="top" secondItem="t8K-Xx-LfM" secondAttribute="bottom" constant="8" symbolic="YES" id="DUZ-g9-8K4"/>
+                            <constraint firstItem="HJ0-uf-vC7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="DZH-d4-Fqm"/>
+                            <constraint firstItem="mo2-EZ-jYZ" firstAttribute="centerX" secondItem="HJ0-uf-vC7" secondAttribute="centerX" id="HfY-gS-Dl3"/>
+                            <constraint firstItem="erc-cZ-HZ1" firstAttribute="top" secondItem="Lbl-p2-JpG" secondAttribute="bottom" constant="6.5" id="IsG-Pb-NjV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HJ0-uf-vC7" secondAttribute="trailing" constant="35" id="J1S-vx-rLI"/>
+                            <constraint firstItem="erc-cZ-HZ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="LwF-tR-eHv"/>
+                            <constraint firstItem="Lbl-p2-JpG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MRL-gr-Ubz"/>
+                            <constraint firstItem="t8K-Xx-LfM" firstAttribute="top" secondItem="TFn-EK-bKk" secondAttribute="bottom" constant="28" id="PVR-yC-uoQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t8K-Xx-LfM" secondAttribute="trailing" constant="10" id="RfV-vz-UUU"/>
+                            <constraint firstItem="TFn-EK-bKk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YFS-vv-Iwo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lbl-p2-JpG" secondAttribute="trailing" constant="10" id="ddZ-Uz-tsE"/>
+                            <constraint firstItem="HJ0-uf-vC7" firstAttribute="top" secondItem="erc-cZ-HZ1" secondAttribute="bottom" constant="18" id="f8t-de-A6d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="erc-cZ-HZ1" secondAttribute="trailing" constant="11" id="gSt-fD-8Sp"/>
+                            <constraint firstAttribute="trailing" secondItem="TFn-EK-bKk" secondAttribute="trailing" id="nOF-h6-zu8"/>
+                            <constraint firstItem="TFn-EK-bKk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="qXb-3N-i65"/>
+                            <constraint firstItem="mo2-EZ-jYZ" firstAttribute="top" secondItem="HJ0-uf-vC7" secondAttribute="bottom" constant="55" id="xDF-ZR-irr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCheckUpdate" destination="HJ0-uf-vC7" id="8pu-Hc-wxN"/>
+                        <outlet property="lblInfo" destination="Lbl-p2-JpG" id="z7i-Nu-rgg"/>
+                        <outlet property="lblStatus" destination="mo2-EZ-jYZ" id="301-rY-rqd"/>
+                        <outlet property="txtAppID" destination="erc-cZ-HZ1" id="Qlw-Zl-Ec7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.98550724637687" y="65.625"/>
+        </scene>
+    </scenes>
+</document>
